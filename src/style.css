@@ -1,1 +1,105 @@
-/* add styles here */
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir-Light.woff2') format('woff2'),
+       url('./fonts/Avenir-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 300;
+  background-color: #ffffff;
+  padding: 0 16px;
+}
+
+.search-form {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #E1E7ED;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-form::before {
+  content: "";
+  position: absolute;
+  background-image: url('./images/Search.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+
+.search-form--big {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+.search-form--big::before {
+  left: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+.search-form--big .search-form__input {
+  padding-left: 36px;
+}
+
+.search-form--small {
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+.search-form--small::before {
+  left: 16px;
+  width: 18px;
+  height: 18px;
+}
+
+.search-form--small .search-form__input {
+  padding-left: 26px;
+}
+
+.search-form__input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  font-family: 'Avenir', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #333;
+}
+
+.search-form__input::placeholder {
+  color: #a0a0a0;
+  font-weight: 300;
+}
+
+
+.search-form:hover {
+  border-color: #b0b0b0;
+  background-color: #fafafa;
+}
+
+.search-form:focus-within {
+  border-color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px #000000;
+}
